@@ -1,0 +1,41 @@
+#discount{
+    padding: 0px 10%;
+}
+
+.title{
+    text-align: center;
+}
+
+.bg-glass{
+    background-color: rgba(255, 255, 255, 0.15);
+    padding: 30px;
+}
+
+.text-white{
+    -webkit-text-fill-color: white !important;
+    color: #fff;
+    font-size: 1.5em;
+}
+
+.card{
+    background-color: transparent !important;
+}
+
+/* Discount Brokers Horizontal */
+
+.row-gradient{
+    padding: 2rem;
+    background: linear-gradient(90deg, rgba(212, 212, 212, 0.721) -60%, rgba(6,32,51,1) 73%);
+}
+
+.discountNumber{
+    font-size: 2em;
+    color: #fff;
+    font-weight: 700;
+}
+
+.discountText{
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #fff;
+}
