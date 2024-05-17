@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Brokers } from '../../Interfaces/brokers.interfaces';
+import { Brokers } from '../../Interfaces/brokers.interface';
 
 @Component({
   selector: 'app-home',

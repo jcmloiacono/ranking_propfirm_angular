@@ -9,11 +9,7 @@
 
             <div class="filters">
                 <!-- Búsqueda -->
-                <div class="filter-group">
-                    <label for="search">Search:</label>
-                    <input type="text" id="search" [(ngModel)]="searchTerm" (input)="applyFilters()"
-                        class="form-control" placeholder="Search firm" />
-                </div>
+                <app-bar-search [homePage]="true" [labelText]="'Search'"/>
 
                 <!-- Asset Type -->
                 <div class="filter-group">

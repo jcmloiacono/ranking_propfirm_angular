@@ -1,0 +1,94 @@
+#review{
+    padding: 0px 10%;
+}
+
+.title{
+    text-align: center;
+}
+
+.bg-glass{
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 10px;;
+    padding: 50px;
+    margin-bottom: 50px;
+}
+
+// Broker Review
+
+.review-card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    box-sizing: border-box;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.no-gutters {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.firm-logo {
+    width: 100%;
+    height: auto;
+}
+
+.info-block {
+    flex: 1;
+    padding: 20px;
+}
+
+.stars {
+    color: #FFD700;
+    margin: 5px 0;
+}
+
+.address {
+    margin: 0;
+    color: #666;
+}
+
+//BTN
+.btn-like{
+    border: solid #666 1px;
+    border-radius: 25px 0px 0px 25px;
+    background-color: transparent;
+}
+
+.btn-sad{
+    border: solid #666 1px;
+    border-radius: 0px 25px 25px 0px;
+    background-color: #fff;
+}
+
+.accordion-button {
+    border-radius: 0px 0px 10px 10px;
+}
+
+.accordion-header .accordion-button {
+    width: 100%;
+    padding: 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s ease;
+    
+}
+
+.accordion-item {
+    border-radius: 0px 0px 10px 10px !important;
+}
+
+.accordion-item-info {
+    padding: 20px;
+    margin: 0;
+    background-color: #f9f9f9;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(25% - 10px);
+    border-radius: 0px 0px 10px 10px !important;
+}

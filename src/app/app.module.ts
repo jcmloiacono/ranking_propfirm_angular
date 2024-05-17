@@ -1,6 +1,10 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms'; // Importa FormsModule
+import { FormsModule } from '@angular/forms';
+import { MatInputModule } from '@angular/material/input';
+import { MatIconModule } from '@angular/material/icon';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 //  Imports components pages
 import { AppRoutingModule } from './app-routing.module';
@@ -14,6 +18,8 @@ import { LotteryComponent } from './pages/lottery/lottery.component';
 import { CompareComponent } from './pages/compare/compare.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
+import { BarSearchComponent } from './components/bar-search/bar-search.component';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 @NgModule({
   declarations: [
@@ -26,15 +32,20 @@ import { FooterComponent } from './shared/footer/footer.component';
     LotteryComponent,
     CompareComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    BarSearchComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    MatInputModule,
+    MatIconModule
   ],
   providers: [
-    provideClientHydration()
+    provideClientHydration(),
+    provideAnimationsAsync()
   ],
   bootstrap: [AppComponent]
 })

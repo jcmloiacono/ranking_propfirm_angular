@@ -1,1 +1,40 @@
-<p>ranking works!</p>
+<section id="ranking">
+    <div class="container-flex title">
+        <h1>Ranking Prop firms List</h1>
+    </div>
+    <!-- Search -->
+    <div class="container-fluid bg-glass">
+        <div class="container">
+            <app-bar-search [homePage]="false" [labelText]="'Search prop firm'" />
+        </div>
+    </div>
+    <!-- table ranking -->
+    <div class="col-12">
+        <!-- Tabla -->
+        <div class="content-table m-3">
+            <table>
+                <thead class="thead-pers">
+                    <tr>
+                        <th>Position</th>
+                        <th>Firm</th>
+                        <th>Description</th>
+                        <th>Promo Code</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody class="tbody-custom rankingTable">
+                    <tr *ngFor="let data of tableData; let i = index">
+                        <td class="text-white">{{i + 1}}</td>
+                        <td><img src="{{ data.firmImg }}" alt="{{data.firm}}">
+                            <p>{{data.firm}}</p>
+                        </td>
+                        <td>{{ data.infoRanking }}</td>
+                        <td>{{ data.coupon }}</td>
+                        <td><a href="{{ data.buy }}">Buy</a>
+                            <a href="#" class="text-white bg-transparent">View Prop Firm</a>
+                        </td>
+                    </tr>
+            </table>
+        </div>
+    </div>
+</section>

@@ -16,7 +16,7 @@ body {
 
 // Estilos para los títulos
 .title{
-  padding: 90px 0 30px 0;
+  margin-top: 100px;
 }
 
 .title h1 {
@@ -28,6 +28,7 @@ body {
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text; 
   color:#fff;
+  height: 50px;
 }
 
 h2 {
@@ -101,3 +102,52 @@ p {
 .space-medium{margin: 25px;}
 
 .space-long{margin: 20px;}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+// Stilos para las tablas
+
+table {
+  width: 100%;
+  thead.thead-pers {
+      background-color: linear-gradient(90deg, rgba(255, 255, 255, 0.25) 0%, #002033 65.96%);
+      text-align: center;
+
+      th,
+      td {
+          border: 1px solid #ddd;
+          padding: 8px;
+      }
+
+      th {
+          background-color: transparent;
+          color: #fff !important;
+          font-size: .7em;
+      }
+
+      tr:nth-child(even) {
+          background-color: #f2f2f2;
+      }
+  }
+
+  tbody.tbody-custom {
+      background-color: transparent;
+      color: #fff;
+      font-size: .7em;
+      text-align: center;
+      vertical-align: middle;
+
+      a {
+          padding: 5px 10px;
+          background-color: #fff;
+          color: rgba(0, 77, 82, 1);
+          border-radius: 10px;
+      }
+
+      td {
+          border: solid 1px rgba(255, 255, 255, 0.3);
+          padding: 0px 8px;
+      }
+  }
+}
