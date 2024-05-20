@@ -14,25 +14,31 @@
 }
 
 // Broker Review
-
+.bg-reviewBroker{
+    background: linear-gradient(90deg, rgba(71,108,113,1) 19%, rgba(17,67,69,1) 100%) !important;
+    border-radius: 20px;
+}
 .review-card {
     display: flex;
     flex-direction: column;
     width: 100%;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
+    background-color: transparent;
     box-sizing: border-box;
-    border-radius: 10px 10px 0px 0px;
+    border-bottom: solid 1px #b1b1b1;
 }
 
+.firm-name{
+    color: #fff !important;
+    -webkit-text-fill-color:#fff;
+}
 .no-gutters {
     margin-right: 0;
     margin-left: 0;
 }
 
 .firm-logo {
-    width: 100%;
-    height: auto;
+    width: 52px;
+    height: 52px;
 }
 
 .info-block {
@@ -40,19 +46,21 @@
     padding: 20px;
 }
 
-.stars {
-    color: #FFD700;
-    margin: 5px 0;
+.single-stars{
+    color: #0b614f;
+    margin: 5px 2px;
+    background-color: #fff;
+}
+.trustScore, .address, .time{
+    color: #ffffff80;
+    font-size: 0.75rem;
 }
 
-.address {
-    margin: 0;
-    color: #666;
-}
 
 //BTN
 .btn-like{
-    border: solid #666 1px;
+    color: #fff;
+    border: solid #b1b1b1 1px;
     border-radius: 25px 0px 0px 25px;
     background-color: transparent;
 }
@@ -63,32 +71,43 @@
     background-color: #fff;
 }
 
-.accordion-button {
-    border-radius: 0px 0px 10px 10px;
+.accordion {
+    --bs-accordion-btn-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='white'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+    --bs-accordion-btn-active-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='white'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
 }
 
+.accordion-button, .accordion {
+    border-radius: 0px 0px 10px 10px;
+    color: #fff;
+    background-color: transparent;
+}
+.accordion-button:not(.collapsed){
+    box-shadow: none;
+}
 .accordion-header .accordion-button {
     width: 100%;
     padding: 20px;
-    background-color: #007BFF;
+    background-color: transparent;
     color: white;
     border: none;
     cursor: pointer;
     outline: none;
     transition: background-color 0.3s ease;
-    
 }
-
 .accordion-item {
-    border-radius: 0px 0px 10px 10px !important;
+    background-color: transparent;
+    border: none;
+}
+.accordion-item-info {
+    padding: 15px;
+    margin: 10px;
+    background: radial-gradient(at bottom left, #3e9d8a, #050f0f);
+    flex: 1 1 calc(25% - 10px);
+    border-radius: 10px !important;
 }
 
-.accordion-item-info {
-    padding: 20px;
-    margin: 0;
-    background-color: #f9f9f9;
-    text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    flex: 1 1 calc(25% - 10px);
-    border-radius: 0px 0px 10px 10px !important;
+.user-initials{
+    background-color: #fff;
+    border-radius: 25px;
+    padding: 8px;
 }
