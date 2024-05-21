@@ -20,6 +20,7 @@ import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { BarSearchComponent } from './components/bar-search/bar-search.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { NewsletterComponent } from './components/newsletter/newsletter.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
     CompareComponent,
     HeaderComponent,
     FooterComponent,
-    BarSearchComponent
+    BarSearchComponent,
+    NewsletterComponent
   ],
   imports: [
     BrowserModule,

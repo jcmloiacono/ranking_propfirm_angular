@@ -1,0 +1,28 @@
+input{
+    color: #fff;
+    background-color: transparent;
+    border-radius: 25px;
+    padding: 10px;
+    font-size: 1.2em;
+    border-left: none;
+}
+input::placeholder{
+    color: #a3a3a3b8;
+    font-weight: 600; 
+}
+
+.fas{
+    border: solid 1px #fff;
+    border-right: none;
+    border-radius: 25px;
+    font-size: 1.2em;
+    padding: 14.2px;
+    color:#ffffff80;
+}
+
+.btn{
+    border-radius: 25px;
+    margin: 0 20px;
+    padding: 0px 20px;
+}
+
