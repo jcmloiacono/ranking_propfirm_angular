@@ -1,7 +1,8 @@
 <div class="filter-group" [ngClass]="{'homeSearch': homePage, 'otherSearch': !homePage}">
     <label class="text-white" for="search">{{ labelText }}</label>
     <div class="input-group align-items-center">
+        <i class="fas fa-search"></i>
         <input type="text" id="search" [(ngModel)]="searchTerm" (input)="applyFilters()"
-            class="form-control" placeholder=" search...">
+            class="form-control" placeholder="Search...">
     </div>
 </div>
