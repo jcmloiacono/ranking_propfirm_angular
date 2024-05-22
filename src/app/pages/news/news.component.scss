@@ -5,3 +5,90 @@
 .title{
     text-align: center;
 }
+
+.subtitle{
+    margin-top: -20px;
+    margin-bottom: 50px;
+}
+
+.content-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+}
+
+.content-container-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+}
+
+.data-pub{
+    font-size: 8px;
+    color: #fff;
+    padding: 5.33px 10.67px 5.33px 10.67px;
+    background-color: #297f6d;
+    border-radius: 26.67px;
+}
+
+.height-news{
+    border-radius: 10px;
+}
+
+.title-news{
+    -webkit-text-fill-color:#fff;
+    font-weight: 600;
+}
+
+.title-news2{
+    font-size: 0.78rem;
+    -webkit-text-fill-color:#fff;
+    font-weight: 600;
+    line-height: 21px;
+}
+
+.height-news-top{
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 142px;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.height-news-bottom{
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 142px;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+// Styles Card News
+.card{
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,0.5046393557422969) 0%, rgba(0,32,51,1) 60%);
+    border-radius: 16px;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+    padding: 15px;
+    border-radius: 20px;
+}
+
+
+.info-news{
+    color: #fff;
+    background-color: #ffffff1a;
+    padding: 5.33px 10.67px 5.33px 10.67px;
+    margin: 5.33px;
+    border-radius: 25px;
+}
