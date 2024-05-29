@@ -13,10 +13,25 @@
     margin-bottom: 50px;
 }
 //Style table 
+ 
+tbody tr:nth-of-type(n+1):nth-of-type(-n+1) {
+    background: -webkit-linear-gradient(90deg, rgba(0, 175, 129, 0.5) 0%, rgba(5, 47, 55, 1) 100%);
+    background: -moz-linear-gradient(90deg, rgba(0, 175, 129, 0.5) 0%, rgba(5, 47, 55, 1) 100%);
+    background: -o-linear-gradient(90deg, rgba(0, 175, 129, 0.5) 0%, rgba(5, 47, 55, 1) 100%);
+}
 
-tbody tr:nth-of-type(n+1):nth-of-type(-n+3) {
-    background: linear-gradient(90deg, rgba(0, 175, 129, 0.5) 0%, rgba(5,47,55,1) 100%);
-  }
+tbody tr:nth-of-type(n+2):nth-of-type(-n+2) {
+    background: -webkit-linear-gradient(90deg, rgba(0, 175, 129, 0.5) 100%, rgba(5, 47, 55, 1) 0%);
+    background: -moz-linear-gradient(90deg, rgba(0, 175, 129, 0.5) 100%, rgba(5, 47, 55, 1) 0%);
+    background: -o-linear-gradient(90deg, rgba(0, 175, 129, 0.5) 100%, rgba(5, 47, 55, 1) 0%);
+    
+}
+
+tbody tr:nth-of-type(n+3):nth-of-type(-n+3) {
+    background: -webkit-linear-gradient(270deg, rgba(0, 175, 129, 0.5) 0%, rgba(235, 235, 235, 0.821) 80%);
+    background: -moz-linear-gradient(270deg, rgba(0, 175, 129, 0.5) 0%, rgba(235, 235, 235, 0.821) 80%);
+    background: -o-linear-gradient(270deg, rgba(0, 175, 129, 0.5) 0%, rgba(235, 235, 235, 0.821) 80%);
+} 
 
 table thead.thead-pers th{
     border:0px;

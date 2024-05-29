@@ -4,13 +4,13 @@
 
         <div class="p-0 col-3 vh-100">
             <div class="cont-search">
-                <button class="btn-search">Save research</button>
+                <button class="btn-search">Search</button>
             </div>
 
             <div class="filters">
                 <!-- Búsqueda -->
                 <div class="filter-group">
-                    <label class="text-white" for="search">Search:</label>
+                    <label class="text-white" for="search">PropFirm Name:</label>
                     <div class="input-group align-items-center">
                         <i class="fas fa-search"></i>
                         <input type="text" id="search" [(ngModel)]="searchTerm" (input)="applyFilters()"
@@ -40,11 +40,13 @@
                         <option value="50000">$50,000</option>
                         <option value="100000">$100,000</option>
                         <option value="200000">$200,000</option>
+                        <option value="200000">$300,000</option>
+                        <option value="200000">$400,000</option>
                     </select>
                 </div>
                 <!-- Price -->
                 <div class="filter-group">
-                    <label for="price">Price $:</label>
+                    <label for="price">Account Price:</label>
                     <input type="range" id="price" min="0" max="200000" [(ngModel)]="selectedPrice"
                         (change)="applyFilters()" class="form-range">
                     <div class="range-values">
@@ -62,9 +64,9 @@
                             <span id="end-value">$ 200.000</span>
                         </div>
                 </div>
-                <!-- Profit Target % (Combined) -->
+                <!-- Daily Drawdown -->
                 <div class="filter-group">
-                    <label for="profitTarget">Profit Target % (Combined)</label>
+                    <label for="profitTarget">Daily Drawdown</label>
                     <input type="range" id="profitTarget" min="0" max="200000"
                         [(ngModel)]="selectedprofitTarget" (change)="applyFilters()" class="form-range">
                         <div class="range-values">
@@ -72,12 +74,21 @@
                             <span id="end-value">$ 200.000</span>
                         </div>
                 </div>
+                <!-- Overall Drawdown -->
+                <div class="filter-group">
+                    <label for="overall">Overall Drawdown:</label>
+                    <input type="range" id="overall" min="0" max="200000" [(ngModel)]="overallDrawdown"
+                        (change)="applyFilters()" class="form-range">
+                    <div class="range-values">
+                        <span id="start-value">{{overallDrawdown}}</span>
+                        <span id="end-value">$ 200.000</span>
+                    </div>
+                </div>
                 <!-- Brokers -->
                 <div class="filter-group">
-                    <label for="brokers">Brokers:</label>
+                    <label for="brokers">Trading Platform:</label>
                     <select class="form-select form-select-lg mb-3" aria-label="Select Broker" id="brokers"
                         [(ngModel)]="selectedBroker" (change)="applyFilters()">
-                        <option selected>Open this select menu</option>
                         <option disabled selected>Select</option>
                         <option value="broker1">Broker 1</option>
                         <option value="broker2">Broker 2</option>
@@ -107,34 +118,32 @@
                 <table>
                     <thead class="thead-pers">
                         <tr>
-                            <th>Firm</th>
-                            <th>Price</th>
+                            <th>Logo</th>
+                            <th>Name</th>
                             <th>Account Size</th>
-                            <th>Profit Target</th>
-                            <th>Max. Daily Loss</th>
+                            <th>Profit Target phase 1</th>
+                            <th>Profit Target phase 2</th>
                             <th>Max. Total Drawdown</th>
-                            <th>Daily Drowdown Reset Type</th>
+                            <th>Drowdown Type</th>
                             <th>Commission per Round Lot (Forex)</th>
                             <th>Technology</th>
-                            <th>Profit Target to Drawdown Ratio</th>
                             <th>Payout Frequency</th>
-                            <th>Trust Pilot Rating</th>
-                            <th>Year Established & Country</th>
-                            <th>Loyalty Points</th>
+                            <th>Year Established</th>
+                            <th>Country</th>
+                            <th>TrustPilot Rating</th>
                             <th>Buy</th>
                         </tr>
                     </thead>
                     <tbody class="tbody-custom">
                         <tr *ngFor="let data of tableData">
-                            <td><img src="{{ data.firmImg }}" alt="{{data.firm}}">
-                                <p>{{data.firm}}</p>
+                            <td>
+                                <img class="w-80" src="{{ data.firmImg }}" alt="{{data.firm}}">
                             </td>
-                            <td>{{ data.price }}</td>
+                            <td>{{ data.firm}}</td>
                             <td>{{ data.accountSize }}</td>
                             <td>{{ data.profitTarget }}</td>
                             <td>{{ data.maxDailyLoss }}</td>
                             <td>{{ data.maxTotalDrawdown }}</td>
-                            <td>{{ data.dailyDrowdownResetType }}</td>
                             <td>{{ data.commissionPerRoundLot }}</td>
                             <td>{{ data.technology }}</td>
                             <td>{{ data.profitTargetToDrawdownRatio }}</td>

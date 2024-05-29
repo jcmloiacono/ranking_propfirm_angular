@@ -14,11 +14,12 @@
 }
 
 .cont-search {
-    background-color: rgba(0, 77, 82, 0.9);
+    background-color: rgba(255, 255, 255, 0.1);
     margin-bottom: 5px;
     padding: 15px;
 
     .btn-search {
+        background-color: rgba(255, 255, 255, 0.1);
         width: 100%;
         padding: 10px 15px;
         background-color: #fff;
@@ -31,7 +32,7 @@
 .filters {
     height: 100%;
     padding: 20px;
-    background-color: #004d52e6;
+    background-color: rgba(255, 255, 255, 0.1);
     font-size: .875rem;
     overflow-y: auto;
 
@@ -110,6 +111,15 @@
     input[type="range"]#profitTarget::-webkit-slider-thumb {
         background-color: #ffffff;
     }
+    /* Estilos para la barra de desplazamiento (Filtro Precio) */
+    input[type="range"]#overall::-webkit-slider-runnable-track {
+        background: linear-gradient(90deg, rgba(55, 142, 119, 1) 0%, rgba(0, 32, 51, 1) 65.96%);
+    }
+    /* Estilos para el control deslizante */
+    input[type="range"]#overall::-webkit-slider-thumb {
+        background-color: #ffffff;
+    }
+
     .range-values {
         display: flex;
         justify-content: space-between;
@@ -119,16 +129,14 @@
     }
 }
 
-.content-table {
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0.21) 0%, #002033 65.96%);
+.thead-pers{
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.21) 0%, #002033 65.96%);
     overflow-x: auto;
 }
 
 .col-9 {
     margin-left: 25%;
 }
-
-
 
 @media screen and (max-width: 1260px) {
     .content-table {

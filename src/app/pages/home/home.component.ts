@@ -18,6 +18,8 @@ selectedAccountSizeRange: number = 0;
 selectedprofitTarget: number = 0;
 selectedBroker: string = 'Select';
 selectedPlatform: string = 'Select';
+filteredTableData: Brokers[] = [];
+overallDrawdown: number = 0;
 
 // Datos de ejemplo para la tabla
 tableData: Brokers[] = [
@@ -38,8 +40,7 @@ tableData: Brokers[] = [
   { firmImg: '/assets/img/home/broker1.png', firm:'FundedNext', price: 82.17, accountSize: 50000, profitTarget: 90, maxDailyLoss: 1.9, maxTotalDrawdown: 3, dailyDrowdownResetType: 6, dailyDrowdownResetType2: 'Balance-based', commissionPerRoundLot: '$5/round lot', technology: 'White-Label', profitTargetToDrawdownRatio: '1: 0.67', payoutFrequency: 14, trustPilotRating: 4.6, yearEstablishedAndCountry: 'United Arab Emirates', loyaltyPoints: 116, buy: 'https://ofpfunding.com' }
 ];
 
-// Datos filtrados para la tabla
-filteredTableData: Brokers[] = [];
+
 
 constructor() { }
 
