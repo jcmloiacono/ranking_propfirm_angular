@@ -14,21 +14,25 @@ body {
     min-height: 100vh;
 }
 
+h1, h2, h3, h4, h5, h6, p, tr, th, span{
+  font-family: $font-family;
+}
 // Estilos para los títulos
 .title{
-  margin-top: 100px;
+  margin-top: 120px;
+  margin-bottom: 40px;
 }
 
 .title h1 {
   font-family: 'Inter', sans-serif;
-  font-size:3em;
+  font-size:4em;
   color:#fff;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.5) 0%, #17C7A2 87.66%);
   font-weight: 700;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text; 
   color:#fff;
-  height: 50px;
+  padding: 20px;
 }
 
 h2 {

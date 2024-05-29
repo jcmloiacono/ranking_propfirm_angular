@@ -9,7 +9,14 @@
 
             <div class="filters">
                 <!-- Búsqueda -->
-                <app-bar-search [homePage]="true" [labelText]="'Search'"/>
+                <div class="filter-group">
+                    <label class="text-white" for="search">Search:</label>
+                    <div class="input-group align-items-center">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="search" [(ngModel)]="searchTerm" (input)="applyFilters()"
+                            class="form-control" placeholder="Search...">
+                    </div>
+                </div>  
 
                 <!-- Asset Type -->
                 <div class="filter-group">
@@ -26,7 +33,7 @@
                 <div class="filter-group">
                     <label for="accountSize">Account Size:</label>
                     <select class="form-select form-select-lg mb-3" aria-label="Large select example" id="accountSize"
-                        [(ngModel)]="selectedAssetType" (change)="applyFilters()">
+                        [(ngModel)]="selectedAccountSize" (change)="applyFilters()">
                         <option disabled selected>Select</option>
                         <option value="5000">$5,000</option>
                         <option value="10000">$10,000</option>
@@ -55,11 +62,21 @@
                             <span id="end-value">$ 200.000</span>
                         </div>
                 </div>
+                <!-- Profit Target % (Combined) -->
+                <div class="filter-group">
+                    <label for="profitTarget">Profit Target % (Combined)</label>
+                    <input type="range" id="profitTarget" min="0" max="200000"
+                        [(ngModel)]="selectedprofitTarget" (change)="applyFilters()" class="form-range">
+                        <div class="range-values">
+                            <span id="start-value">{{selectedprofitTarget}}</span>
+                            <span id="end-value">$ 200.000</span>
+                        </div>
+                </div>
                 <!-- Brokers -->
                 <div class="filter-group">
                     <label for="brokers">Brokers:</label>
                     <select class="form-select form-select-lg mb-3" aria-label="Select Broker" id="brokers"
-                        [(ngModel)]="selectedAssetType" (change)="applyFilters()">
+                        [(ngModel)]="selectedBroker" (change)="applyFilters()">
                         <option selected>Open this select menu</option>
                         <option disabled selected>Select</option>
                         <option value="broker1">Broker 1</option>
@@ -68,6 +85,20 @@
                         <option value="broker4">Broker 4</option>
                     </select>
                 </div>
+                <!-- Platforms -->
+                <div class="filter-group">
+                    <label for="brokers">Brokers:</label>
+                    <select class="form-select form-select-lg mb-3" aria-label="Select Broker" id="brokers"
+                        [(ngModel)]="selectedPlatform" (change)="applyFilters()">
+                        <option selected>Open this select menu</option>
+                        <option disabled selected>Select</option>
+                        <option value="broker1">Broker 1</option>
+                        <option value="broker2">Broker 2</option>
+                        <option value="broker3">Broker 3</option>
+                        <option value="broker4">Broker 4</option>
+                    </select>
+                </div>
+
             </div>
         </div>
         <div class="col-9">

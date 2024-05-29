@@ -1,0 +1,74 @@
+#compare{
+    padding: 0px 10%;
+}
+
+.title{
+    text-align: center;
+}
+
+.add-prop {
+    background-color: rgba(255, 255, 255, 0.05);
+    font-size: 4.5rem;
+    width: 100px; 
+    height: 100px; 
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    border-radius: 50%;
+    color: #fff;
+}
+
+// Table Compare
+
+table > :not(caption) > * > * {
+    background-color: transparent;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse; 
+}
+
+.table th, .table td {
+    padding: 20px;
+    text-align: left;
+    background: transparent; 
+}
+
+/* Borde inferior para todas las filas del tbody excepto la última */
+.table tbody tr:not(:last-child) {
+    border-bottom: 1px solid #ccc; 
+}
+
+/* Borde izquierdo para la última columna de cada fila */
+.table tbody tr td:last-child {
+    border-left: 1px solid #ccc; 
+}
+
+// Info Propfirm on the table
+.title-propfim{
+    -webkit-text-fill-color: #fff;
+    margin: 0px;
+}
+.img-propfirm{
+    width: 60px;
+}
+.datatitle{
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.75rem;
+    font-weight: 400;
+}
+
+.data{
+    color: #fff;   
+}
+
+td.features{
+    color: #fff;
+    font-size: 1.1rem;
+}
+
+.title-veredict{
+    font-size: 2.5rem;
+    -webkit-text-fill-color: #fff;
+}

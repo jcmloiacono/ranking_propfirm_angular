@@ -32,6 +32,30 @@
     height: 100%;
     padding: 20px;
     background-color: #004d52e6;
+    font-size: .875rem;
+    overflow-y: auto;
+
+    .input-group input {
+        color: #fff;
+        background-color: transparent;
+        border-radius: 5px;
+        padding: 6px 12px 6px 12px;
+        
+        border-left: none;
+    }
+    
+    .input-group input::placeholder{
+        color: #a3a3a3b8;
+        font-size: .875rem;
+    }
+    
+    .fas{
+        border: solid 1px #fff;
+        border-right: none;
+        border-radius: 5px;
+        padding: 11px;
+        color:#ffffff80;
+    }
 
     label {
         color: #fff;
@@ -42,8 +66,8 @@
         text-align: left;
     }
 
-    select {
-        padding: 3px 12px 3px 12px;
+    .form-select {
+        padding: 10px 12px 10px 12px;
         gap: 0px;
         border-radius: 6px;
         background-color: transparent;
@@ -52,18 +76,40 @@
         color: #fff;
     }
 
-
-
-    /* Estilos para la barra de desplazamiento (la barra) */
-    input[type="range"]::-webkit-slider-runnable-track {
-        background: linear-gradient(90deg, rgba(255, 255, 255, 0.25) 0%, #002033 65.96%);
+    .filter-group{
+        margin: 10px 0px;
+    }
+    .filter-group label{
+        margin-bottom: 10px;
     }
 
+    // Filter Price 
+    /* Estilos para la barra de desplazamiento (Filtro Precio) */
+    input[type="range"]#price::-webkit-slider-runnable-track {
+        background: linear-gradient(90deg, rgba(55, 142, 119, 1) 0%, rgba(0, 32, 51, 1) 65.96%);
+    }
     /* Estilos para el control deslizante */
-    input[type="range"]::-webkit-slider-thumb {
+    input[type="range"]#price::-webkit-slider-thumb {
+        background-color: #ffffff;
+    }
+    
+    // Filter Account Size
+    input[type="range"]#accountSizeRange::-webkit-slider-runnable-track {
+        background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(0, 32, 51, 1) 75.96%);
+    }
+    /* Estilos para el control deslizante */
+    input[type="range"]#accountSizeRange::-webkit-slider-thumb {
         background-color: #ffffff;
     }
 
+    // Filter Profit Target
+    input[type="range"]#profitTarget::-webkit-slider-runnable-track {
+        background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(55, 142, 119, 1) 75.96%);
+    }
+    /* Estilos para el control deslizante */
+    input[type="range"]#profitTarget::-webkit-slider-thumb {
+        background-color: #ffffff;
+    }
     .range-values {
         display: flex;
         justify-content: space-between;
@@ -74,10 +120,8 @@
 }
 
 .content-table {
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0.25) 0%, #002033 65.96%);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.21) 0%, #002033 65.96%);
     overflow-x: auto;
-    /* TODO Agregar gradiente solo para responsive*/
-    /* box-shadow: inset -40px -4px 20px 0px rgba(255, 0, 0, 0.3) */
 }
 
 .col-9 {
@@ -86,8 +130,8 @@
 
 
 
-@media screen and (max-width: 1450px) {
+@media screen and (max-width: 1260px) {
     .content-table {
-        box-shadow: inset -40px -4px 20px 0px rgba(255, 0, 0, 0.3);
+        box-shadow: inset -40px -4px 20px 0px rgba(254, 254, 254, 0.449);
     }
 }

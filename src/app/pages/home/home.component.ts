@@ -15,7 +15,9 @@ selectedAssetType: string = 'Select';
 selectedAccountSize: string = 'Select';
 selectedPrice: number = 0;
 selectedAccountSizeRange: number = 0;
+selectedprofitTarget: number = 0;
 selectedBroker: string = 'Select';
+selectedPlatform: string = 'Select';
 
 // Datos de ejemplo para la tabla
 tableData: Brokers[] = [

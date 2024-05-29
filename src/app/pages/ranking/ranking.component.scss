@@ -7,7 +7,7 @@
 }
 
 .bg-glass{
-    background-color: rgba(255, 255, 255, 0.15);
+    background-color: rgba(255, 255, 255, 0.05);
     border-radius: 10px;;
     padding: 50px;
     margin-bottom: 50px;
@@ -15,14 +15,16 @@
 //Style table 
 
 tbody tr:nth-of-type(n+1):nth-of-type(-n+3) {
-    background: linear-gradient(90deg, rgba(26,131,113,1) 7%, rgba(5,47,55,1) 100%);
+    background: linear-gradient(90deg, rgba(0, 175, 129, 0.5) 0%, rgba(5,47,55,1) 100%);
   }
 
 table thead.thead-pers th{
     border:0px;
+    font-size: 1rem;
 }
 
 table tbody.tbody-custom td{
+    font-size: 0.8rem;
     border: solid 0px rgba(255, 255, 255, 0.3);
     border-bottom: solid 1px rgba(255, 255, 255, 0.3);
 }
