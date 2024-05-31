@@ -1,8 +1,9 @@
+<section id="sectionHome">
 <div id="home" class="container-fluid">
     <!-- Filtros -->
     <div class="row">
 
-        <div class="p-0 col-3 vh-100">
+        <div class="p-0 col-3 custom-col">
             <div class="cont-search">
                 <button class="btn-search">Search</button>
             </div>
@@ -21,7 +22,7 @@
                 <!-- Asset Type -->
                 <div class="filter-group">
                     <label for="assetType">Asset Type:</label>
-                    <select class="form-select form-select-lg mb-3" aria-label="Large select example" id="assetType"
+                    <select class="form-select form-select-lg mb-3" aria-label="Large Asset Type" id="assetType"
                         [(ngModel)]="selectedAssetType" (change)="applyFilters()">
                         <option disabled selected>Select</option>
                         <option value="forex">Forex</option>
@@ -32,7 +33,7 @@
                 <!-- Account Size -->
                 <div class="filter-group">
                     <label for="accountSize">Account Size:</label>
-                    <select class="form-select form-select-lg mb-3" aria-label="Large select example" id="accountSize"
+                    <select class="form-select form-select-lg mb-3" aria-label="Large Account Size" id="accountSize"
                         [(ngModel)]="selectedAccountSize" (change)="applyFilters()">
                         <option disabled selected>Select</option>
                         <option value="5000">$5,000</option>
@@ -112,7 +113,7 @@
 
             </div>
         </div>
-        <div class="col-9">
+        <div class="col-9 ">
             <!-- Tabla -->
             <div class="content-table m-3">
                 <table>
@@ -123,6 +124,7 @@
                             <th>Account Size</th>
                             <th>Profit Target phase 1</th>
                             <th>Profit Target phase 2</th>
+                            <th>Max daily drawdown</th>
                             <th>Max. Total Drawdown</th>
                             <th>Drowdown Type</th>
                             <th>Commission per Round Lot (Forex)</th>
@@ -144,6 +146,7 @@
                             <td>{{ data.profitTarget }}</td>
                             <td>{{ data.maxDailyLoss }}</td>
                             <td>{{ data.maxTotalDrawdown }}</td>
+                            <td>{{ data.maxTotalDrawdown }}</td>
                             <td>{{ data.commissionPerRoundLot }}</td>
                             <td>{{ data.technology }}</td>
                             <td>{{ data.profitTargetToDrawdownRatio }}</td>
@@ -151,10 +154,11 @@
                             <td>{{ data.trustPilotRating }}</td>
                             <td>{{ data.yearEstablishedAndCountry }}</td>
                             <td>{{ data.loyaltyPoints }}</td>
-                            <td><a href="{{ data.buy }}">Buy</a></td>
+                            <td><a class="text-decoration-none" href="{{ data.buy }}">Buy</a></td>
                         </tr>
                 </table>
             </div>
         </div>
     </div>
 </div>
+</section>

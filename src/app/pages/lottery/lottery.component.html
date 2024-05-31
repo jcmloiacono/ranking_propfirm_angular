@@ -1,2 +1,33 @@
-<p>lottery works!</p>
+<section id="ranking">
+    <div class="container-flex title">
+        <h1 class="text-center">Win an 
+            <select class="rounded-5 select-propfirm" aria-label="Propfirm" id="ProfitWin">
+                <option selected value="FTMO">FTMO</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select>
+            Account
+        </h1>
 
+        <p class="text-center opacity-50">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi numquam harum suscipit odio aliquam.</p>
+    </div>
+<div class="container">
+    <div class="row">
+      <div class="col-xs-12" align="center">
+        <div id="wheel">
+          <canvas #crfCanvas id="canvas" width="360" height="360"></canvas>
+        </div>
+      </div>
+    </div>
+    <!-- end row -->
+    <div class="row text-center">
+      <div class="col-xs-6 p-5">
+        <button type="button" class="btn btn-spin" (click)="startSpin()">Spin Now!</button>
+      </div>
+     <!--  <div class="col-xs-6">
+        <button type="button" id="stop" class="btn btn-info" (click)="stops()">Stop Now!</button>
+      </div> -->
+    </div>
+  </div>
+  </section>

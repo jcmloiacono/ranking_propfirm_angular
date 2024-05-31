@@ -43,7 +43,7 @@ import { NewsletterComponent } from './components/newsletter/newsletter.componen
     FormsModule,
     BrowserAnimationsModule,
     MatInputModule,
-    MatIconModule
+    MatIconModule, 
   ],
   providers: [
     provideClientHydration(),
