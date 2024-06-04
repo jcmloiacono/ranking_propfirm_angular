@@ -55,6 +55,7 @@ export class LotteryComponent implements OnInit {
       this.width = this.canvas.width; // size
       this.center = this.width / 2; // center
       this.create_spinner();
+      
     }
   }
 
@@ -67,6 +68,8 @@ export class LotteryComponent implements OnInit {
     this.speed = 10;
     this.slowDownRand = 0;
     this.ctx.clearRect(0, 0, this.width, this.width);
+    this.drawBorder();
+
     for (let i = 0; i < slices; i++) {
       this.ctx.beginPath();
       this.ctx.fillStyle = color[i];
@@ -74,7 +77,7 @@ export class LotteryComponent implements OnInit {
       this.ctx.arc(
         this.center,
         this.center,
-        this.width / 2,
+        (this.width / 2) -5,
         this.deg2rad(this.deg),
         this.deg2rad(this.deg + sliceDeg)
       );
@@ -91,7 +94,27 @@ export class LotteryComponent implements OnInit {
       this.ctx.restore();
       this.deg += sliceDeg;
     }
+    this.drawArrow();
   }
+
+  drawBorder(): void {
+    this.ctx.beginPath();
+    this.ctx.arc(this.center, this.center, (this.width / 2) - 5, 0, Math.PI * 2); // Reduce el radio para evitar que el borde se corte
+    this.ctx.lineWidth = 10; // Ajusta el grosor del borde
+    this.ctx.strokeStyle = 'white'; // Ajusta el color del borde
+    this.ctx.stroke();
+  }
+
+  drawArrow(): void {
+    this.ctx.beginPath();
+    this.ctx.moveTo(this.center - 15, 0); //arrow left
+    this.ctx.lineTo(this.center + 15, 0); //arrow right
+    this.ctx.lineTo(this.center, 20); // arrow height
+    this.ctx.closePath();
+    this.ctx.fillStyle = 'red';
+    this.ctx.fill();
+  }
+
 
   spin = (): void => {
     const color = this.color_data;
@@ -116,13 +139,18 @@ export class LotteryComponent implements OnInit {
       let ai = Math.floor(((360 - this.deg - 90) % 360) / sliceDeg); // deg to Array Index
       ai = (slices + ai) % slices; // Fix negative index
       alert("You got:\n" + label[ai]); // Get Array Item from end Degree
+      // Reset variables
       this.lock = false;
       this.isStopped = true;
       this.totalSpins = 0;
+      this.speed = 10;
+      this.deg = this.rand(0, 360); // Random initial degree
       return;
     }
 
     this.ctx.clearRect(0, 0, this.width, this.width);
+    this.drawBorder(); 
+
     for (let i = 0; i < slices; i++) {
       this.ctx.beginPath();
       this.ctx.fillStyle = color[i];
@@ -130,7 +158,7 @@ export class LotteryComponent implements OnInit {
       this.ctx.arc(
         this.center,
         this.center,
-        this.width / 2,
+        (this.width / 2) - 5, // Reduce el radio de los segmentos para evitar el borde
         this.deg2rad(this.deg),
         this.deg2rad(this.deg + sliceDeg)
       );
@@ -147,7 +175,8 @@ export class LotteryComponent implements OnInit {
       this.ctx.restore();
       this.deg += sliceDeg;
     }
-
+    this.drawArrow();
+    
     window.requestAnimationFrame(this.spin);
   }
 
@@ -155,6 +184,7 @@ export class LotteryComponent implements OnInit {
     if (this.lock) return;
     this.isStopped = false;
     this.targetSpins = this.rand(50, 100); // Random number of spins before slowing down
+    this.speed = 10; // Reset speed
     window.requestAnimationFrame(this.spin);
   }
 

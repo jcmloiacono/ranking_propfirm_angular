@@ -21,6 +21,7 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { BarSearchComponent } from './components/bar-search/bar-search.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { NewsletterComponent } from './components/newsletter/newsletter.component';
+import { BrokerReviewComponent } from './pages/broker-review/broker-review.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { NewsletterComponent } from './components/newsletter/newsletter.componen
     HeaderComponent,
     FooterComponent,
     BarSearchComponent,
-    NewsletterComponent
+    NewsletterComponent,
+    BrokerReviewComponent
   ],
   imports: [
     BrowserModule,
