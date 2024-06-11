@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import {CompareComponent, DiscountComponent, HomeComponent, LotteryComponent, NewsComponent, RankingComponent, ReviewsComponent} from "./pages/index-router"
+import {BrokerReviewComponent, CompareComponent, DiscountComponent, HomeComponent, LotteryComponent, NewsComponent, RankingComponent, ReviewsComponent} from "./pages/index-router"
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -10,6 +10,7 @@ const routes: Routes = [
   {path: 'lottery', component: LotteryComponent},
   {path: 'news', component: NewsComponent},
   {path: 'ranking', component: RankingComponent},
+  {path: 'brokerreview', component: BrokerReviewComponent},
   {path: '', redirectTo: '', pathMatch: 'full'},
   {path: '**', redirectTo: '/'},
 

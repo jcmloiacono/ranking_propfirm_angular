@@ -5,3 +5,4 @@ export { LotteryComponent } from "./lottery/lottery.component";
 export { NewsComponent } from "./news/news.component";
 export { RankingComponent } from "./ranking/ranking.component";
 export { ReviewsComponent } from "./reviews/reviews.component";
+export { BrokerReviewComponent } from "./broker-review/broker-review.component";

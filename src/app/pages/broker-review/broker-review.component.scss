@@ -1,0 +1,76 @@
+#brokerReview{
+    padding: 0px 10%;
+}
+
+.title{
+    text-align: center;
+
+}
+
+.reviewDescription{
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-top: 20px;
+    color: rgba(255, 255, 255, 0.5)
+
+}
+.titlePropfirm{
+    color: #fff !important;
+    -webkit-text-fill-color:#fff;
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 10px 0px;
+    padding: 0px;
+}
+
+.trust {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.totalReview{
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 20px;;
+}
+.single-stars{
+    font-size:2rem;
+    color: #0b614f;
+    margin: 5px 2px;
+    background-color: #fff;
+}
+.trustScore, .address, .time{
+    color: #fff;
+    font-size: 0.75rem;
+}
+
+.pros{
+    border:solid #5fffdd 1px;
+    border-radius: 10px;
+    padding: 20px;
+}
+.pros h3{
+    color:#5fffdd;
+    -webkit-text-fill-color:#5fffdd;
+    font-size: 2rem;
+}
+
+.fa-check{
+    color: #5fffdd
+}
+
+.cons{
+    border:solid #ff7c5f 1px;
+    border-radius: 10px;  
+    padding: 20px;
+}
+.cons h3{
+    color:#ff7c5f;
+    -webkit-text-fill-color:#ff7c5f;
+    font-size: 2rem;
+}
+
+.fa-xmark{
+    color: #ff7c5f;
+}
